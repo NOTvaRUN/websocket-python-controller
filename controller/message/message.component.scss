@@ -1,0 +1,85 @@
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+ion-label {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+ion-item h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+ion-item p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 95%;
+}
+
+ion-item .date {
+  float: right;
+  align-items: center;
+  display: flex;
+}
+
+ion-item ion-icon {
+  color: #c9c9ca;
+}
+
+ion-item ion-note {
+  font-size: 15px;
+  margin-right: 8px;
+  font-weight: normal;
+}
+
+ion-item ion-note.md {
+  margin-right: 14px;
+}
+
+.dot {
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  align-self: start;
+  margin: 16px 10px 16px 16px;
+}
+
+.dot-unread {
+  background: var(--ion-color-primary);
+}
+
+ion-footer ion-title {
+  font-size: 11px;
+  font-weight: normal;
+}
+.key-icon{
+  height: 4rem;
+  width: 4rem;
+  margin: 5px 21px;
+  filter: drop-shadow( 4px 5px 11px rgba(0, 0, 0, .5));
+}
+.title{
+  color: #434343;
+}
+.description{
+  color: #a0a0a0;
+}
+.activity-active{
+  background: #dbf5db;
+  padding: 2px 7px;
+  border: 1px solid #11cf11;
+  border-radius: 5px;
+  color: #82b007;
+}
+.activity-inactive{
+  background: #f5dbdb;
+  padding: 2px 7px;
+  border: 1px solid #cf1111;
+  border-radius: 5px;
+  color: #b00707;
+}

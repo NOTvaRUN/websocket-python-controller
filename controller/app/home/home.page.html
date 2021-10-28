@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-img class="control-choice-img" src='/assets/icon/control-icon.svg' ></ion-img>
+      <ion-text class="control-choice-title">Control Choice</ion-text>
+        <ion-button color="secondary" class="control-choice-btn">
+          <ion-label>Multiple <ion-text class="coming-soon">coming soon</ion-text></ion-label>
+        </ion-button>
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        Inbox
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-list>
+    <ion-searchbar animated [(ngModel)]="search" (ngModelChange)="searchMe()"></ion-searchbar>
+    <ng-container *ngIf='keys'>
+      <app-message *ngFor="let item of keys" [key]="item"></app-message>
+    </ng-container>
+  </ion-list>
+</ion-content>

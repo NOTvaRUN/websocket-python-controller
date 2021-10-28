@@ -1,0 +1,102 @@
+
+<div class="everything">
+  <ion-img class="key-icon" src='/assets/icon/everything.gif'></ion-img>
+</div>
+<div class="container">
+  <div class="main">
+    <div class="top">
+      <div class="segment-1">
+        <button class="btn-cont ion-activatable ripple-parent" 
+        long-press 
+        (click)='trigger(keycodes[0].value)'
+        (onLongPressing)="onLongPressing(keycodes[0].value)" 
+        (contextmenu)="onRightClick($event)">
+          <ion-img class="key-icon" [src]='keycodes[0].url' ></ion-img>
+          <ion-ripple-effect></ion-ripple-effect>
+        </button>
+       
+      </div>
+      <div class="segment-2">
+        <div class="left-div">
+          <button class="btn-cont-seg-2 ion-activatable ripple-parent"
+          long-press 
+          (click)='trigger(keycodes[1].value)'
+          (onLongPressing)="onLongPressing(keycodes[1].value)" 
+          (contextmenu)="onRightClick($event)">
+            <ion-img class="key-icon" [src]='keycodes[1].url'></ion-img>
+            <ion-ripple-effect></ion-ripple-effect>
+          </button>
+        </div>
+        <div class="right-div">
+          <button class="btn-cont-seg-2 ion-activatable ripple-parent"
+          long-press 
+          (click)='trigger(keycodes[2].value)'
+          (onLongPressing)="onLongPressing(keycodes[2].value)" 
+          (contextmenu)="onRightClick($event)">
+            <ion-img class="key-icon" [src]='keycodes[2].url'></ion-img>
+            <ion-ripple-effect></ion-ripple-effect>
+          </button>
+        </div>
+      </div>
+      <div class="segment-3">
+        <button class="btn-cont ion-activatable ripple-parent"
+        long-press 
+        (click)='trigger(keycodes[3].value)'
+        (onLongPressing)="onLongPressing(keycodes[3].value)" 
+        (contextmenu)="onRightClick($event)">
+          <ion-img class="key-icon"  [src]='keycodes[3].url'></ion-img>
+          <ion-ripple-effect></ion-ripple-effect>
+        </button>
+        
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="segment-1">
+        <button class="btn-cont ion-activatable ripple-parent"
+        long-press 
+        (click)='trigger(keycodes[4].value)'
+        (onLongPressing)="onLongPressing(keycodes[4].value)" 
+        (contextmenu)="onRightClick($event)">
+          <ion-img class="key-icon" [src]='keycodes[4].url'></ion-img>
+          <ion-ripple-effect></ion-ripple-effect>
+        </button>
+       
+      </div>
+      <div class="segment-2">
+        <div class="left-div">
+          <button class="btn-cont-seg-2 ion-activatable ripple-parent"
+          long-press 
+          (click)='trigger(keycodes[5].value)'
+          (onLongPressing)="onLongPressing(keycodes[5].value)" 
+          (contextmenu)="onRightClick($event)">
+            <ion-img class="key-icon"  [src]='keycodes[5].url'></ion-img>
+            <ion-ripple-effect></ion-ripple-effect>
+          </button>
+        </div>
+        <div class="right-div">
+          <button class="btn-cont-seg-2 ion-activatable ripple-parent"
+          long-press 
+          (click)='trigger(keycodes[6].value)'
+          (onLongPressing)="onLongPressing(keycodes[6].value)" 
+          (contextmenu)="onRightClick($event)">
+            <ion-img class="key-icon"  [src]='keycodes[6].url'></ion-img>
+            <ion-ripple-effect></ion-ripple-effect>
+          </button>
+        </div>
+      </div>
+      <div class="segment-3">
+        <button class="btn-cont ion-activatable ripple-parent"
+        long-press 
+        (click)='trigger(keycodes[7].value)'
+        (onLongPressing)="onLongPressing(keycodes[7].value)" 
+        (contextmenu)="onRightClick($event)">
+          <ion-img class="key-icon" [src]='keycodes[7].url'></ion-img>
+          <ion-ripple-effect></ion-ripple-effect>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

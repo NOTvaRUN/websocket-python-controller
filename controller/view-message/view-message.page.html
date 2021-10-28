@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+      <ion-text>Select keys</ion-text>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="key">
+  
+    <ng-container [ngSwitch]='key.value'>
+      <ng-container *ngSwitchCase='"everything"'>
+        <ion-item-divider class="main-container">
+          <app-everything></app-everything>
+        </ion-item-divider>
+      </ng-container>
+      <ng-container *ngSwitchCase='"keyboard"'>
+        <ion-item-divider class="main-container">
+          <app-keyboard></app-keyboard>
+        </ion-item-divider>
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        <ion-item-divider class="main-container">
+          <ng-container *ngFor='let button of key.buttons'>
+            <div style='width: 100%; text-align: center;'>
+              <button class="key-button ion-activatable ripple-parent"
+                long-press 
+                (click)='submit(button.value)'
+                (onLongPressing)="onLongPressing(button.value)" 
+                (contextmenu)="onRightClick($event)">
+                <ion-img class="key-icon" [src]='button.url'></ion-img>
+                <ion-ripple-effect></ion-ripple-effect>
+              </button>
+              <span class="key-text">{{button.text}}</span>
+            </div>
+          </ng-container>
+          
+          <!-- <div style='width: 100%; text-align: center;'>
+            <button class="key-button ion-activatable ripple-parent"
+              long-press 
+              (click)='submit(key.value)'
+              (onLongPressing)="onLongPressing(key.value)" 
+              (contextmenu)="onRightClick($event)">
+              <ion-img class="key-icon" [src]='key.url'></ion-img>
+              <ion-ripple-effect></ion-ripple-effect>
+            </button>
+            <span class="key-text">{{key.text}}</span>
+          </div> -->
+        </ion-item-divider>
+      </ng-container>
+    </ng-container>
+    <!-- <div *ngIf='key.value !== "everything"; else everything' style='width: 100%; text-align: center;'>
+      <button class="key-button ion-activatable ripple-parent"
+      long-press 
+      (click)='submit(key.value)'
+      (onLongPressing)="onLongPressing(key.value)" 
+      (contextmenu)="onRightClick($event)">
+        <ion-img class="key-icon" [src]='key.url'></ion-img>
+        <ion-ripple-effect></ion-ripple-effect>
+        
+      </button>
+      <span class="key-text">{{key.text}}</span>
+    </div>
+    <ng-template #everything>
+      <app-everything></app-everything>
+    </ng-template> -->
+
+    
+
+</ion-content>

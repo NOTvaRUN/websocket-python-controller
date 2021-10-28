@@ -1,0 +1,23 @@
+.control-choice-img{
+    height: 2rem;
+    display: inline-block;
+    width: 2rem;
+}
+.control-choice-title{
+    margin-left: 10px;
+    font-weight: 600;
+}
+.control-choice-btn{
+    float: right;
+    padding: 4px;
+}
+.coming-soon{
+    position: absolute;
+    left: -16px;
+    top: -3px;
+    font-size: 10px;
+    color: red;
+    font-weight: 700;
+    background: #ffffff85;
+    padding: 22px 12px;
+}
