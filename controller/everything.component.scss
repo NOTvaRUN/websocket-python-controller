@@ -1,0 +1,98 @@
+.container{
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+}
+.everything{
+  width: 100vh;
+  height: 100vw;
+  position: absolute;
+  top: calc(100% - 78%);
+    right: -25vh;
+}
+
+.main{
+  height: 90vh;
+  width:49vw;
+  .top, .bottom{
+    width: 100%;
+  }
+  .top{
+    height: 50%;
+  }
+  .bottom{
+    height: 50%;
+  }
+  .segment-1, .segment-2, .segment-3{
+    height: 22%;
+    width: 100%;
+  }
+  .segment-1{
+    text-align: center;
+    button{
+      height: 100%;
+      width: 50%;
+    }
+  }
+  .segment-2{
+    // display: flex;
+    // justify-content: space-between;
+    .left-div, .right-div{
+      height: 100%;
+      width: 50%;
+      display: inline-block;
+    }
+    button{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .segment-3{
+    text-align: center;
+    button{
+      height: 100%;
+      width: 50%;
+    }
+  }
+  .bottom{
+    margin-top: 1rem;
+    .b-top, .b-bottom{
+      width: 100%;
+      height: 30%;
+      span{
+        transform: rotate(90deg);
+      }
+      button{
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.everything{
+  transform: rotate(90deg);
+}
+.btn-cont, .btn-cont-seg-2{
+  background: none!important;
+  filter: drop-shadow(-5px 2px 0px rgba(0, 0, 0, 0.5));
+
+}
+.btn-cont:active{
+  margin-right: 10px;
+  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5));
+}
+.btn-cont-seg-2:active{
+  right: 5px;
+  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5));
+}
+.bottom{
+  ion-img{
+    transform: rotate(90deg);
+    height: 87px;
+  }
+}
